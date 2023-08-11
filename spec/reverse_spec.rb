@@ -1,4 +1,4 @@
-require_relative 'reverse_word'
+require_relative '../reverse_word'
 
 RSpec.describe ReverseWord do
     let(:reverse_word) { ReverseWord.new }
