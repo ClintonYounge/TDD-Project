@@ -37,7 +37,10 @@ The site was built with Ruby.
 
 ### Key Features <a name="key-features"></a>
 
-- N/A.
+- Factorialize method.
+- Reverse word method.
+- Fizzbuzz method.
+- Tests for all methods
 
 ## Getting Started
 
