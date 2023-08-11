@@ -5,6 +5,15 @@ describe Solver do
     @solver = Solver.new
   end
 
+  it 'raises an exception for non-integer value' do
+    expect { @solver.factorial('qq') }.to raise_error(ArgumentError)
+  end
+  it 'raises an exception for negative integer value' do
+    expect { @solver.factorial(-1) }.to raise_error(ArgumentError)
+  end
+
+
+
   it 'returns the factorial of a number' do
     expect(@solver.factorial(5)).to eq(120)
   end
