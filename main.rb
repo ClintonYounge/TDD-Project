@@ -1,6 +1,10 @@
+# frozen_string_literal: true
+
+# Solver class
 class Solver
   def factorial(num)
-    return 1 if num == 0
+    return 1 if num.zero?
+
     (1..num).inject(:*)
   end
 
@@ -10,14 +14,14 @@ class Solver
 
   def fizzbuzz(number)
     num = number
-      if num % 3 == 0 && num % 5 == 0
-        "fizzbuzz"
-      elsif num % 3 == 0
-        "fizz"
-      elsif num % 5 == 0
-        "buzz"
-      else
-        "#{num}"
-      end
+    if (num % 3).zero? && (num % 5).zero?
+      'fizzbuzz'
+    elsif (num % 3).zero?
+      'fizz'
+    elsif (num % 5).zero?
+      'buzz'
+    else
+      num.to_s
+    end
   end
 end
