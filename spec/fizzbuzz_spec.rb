@@ -1,4 +1,4 @@
-require_relative '../fizzbuzz'  # Adjust the path to your Solver class
+require_relative '../main'  # Adjust the path to your Solver class
 
 RSpec.describe Solver do
   describe '#fizzbuzz' do
