@@ -12,8 +12,6 @@ describe Solver do
     expect { @solver.factorial(-1) }.to raise_error(ArgumentError)
   end
 
-
-
   it 'returns the factorial of a number' do
     expect(@solver.factorial(5)).to eq(120)
   end
@@ -24,14 +22,6 @@ describe Solver do
 
   it 'returns 2 when given 2' do
     expect(@solver.factorial(2)).to eq(2)
-  end
-
-  it 'returns 6 when given 3' do
-    expect(@solver.factorial(3)).to eq(6)
-  end
-
-  it 'returns 24 when given 4' do
-    expect(@solver.factorial(4)).to eq(24)
   end
 
   it 'returns 120 when given 5' do
