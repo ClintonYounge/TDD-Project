@@ -1,26 +1,25 @@
-require_relative '../fizzbuzz'  # Adjust the path to your Solver class
+require_relative '../main'
 
-RSpec.describe Solver do
-  describe '#fizzbuzz' do
-    it 'prints the correct fizzbuzz sequence' do
-      solver = Solver.new
+describe Solver do
+  before :each do
+    @solver = Solver.new
+  end
 
-      def expected_output(number)
-        if number % 3 == 0 && number % 5 == 0
-          'fizzbuzz'
-        elsif number % 3 == 0
-          'fizz'
-        elsif number % 5 == 0
-          'buzz'
-        else
-          number.to_s
-        end
-      end
+  it 'should return fizz when 3' do
+    expect(@solver.fizzbuzz(3)).to eq("fizz")
+  end
 
-      input_number = 15
-      expected_result = expected_output(input_number) + "\n"
+  it 'should return buzz when 5' do
+    expect(@solver.fizzbuzz(5)).to eq("buzz")
+  end
 
-      expect { solver.fizzbuzz(input_number) }.to output(expected_result).to_stdout
-    end
+  it 'should return fizzbuzz when 15' do
+    expect(@solver.fizzbuzz(15)).to eq("fizzbuzz")
+  end
+
+  it 'should return 7 when 7' do
+    expect(@solver.fizzbuzz(7)).to eq("7")
   end
 end
+
+
